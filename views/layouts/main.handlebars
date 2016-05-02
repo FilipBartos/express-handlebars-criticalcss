@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Critical Path Performance Optimization</title>
+  {{#ifNeedToRenderFast}}
+  <link rel="stylesheet" href="assets/css/bundle.css" id="cssbundle" media="none"/>
+  {{> fastcss}}
+  {{> fastjs}}
+  {{else}}
+  <link rel="stylesheet" href="assets/css/bundle.css" id="cssbundle" media="all"/>
+  {{/ifNeedToRenderFast}}
+</head>
+<body>
+
+</body>
+</html>
