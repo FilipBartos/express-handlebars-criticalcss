@@ -1,9 +1,10 @@
 <script id='fastjs'>
+
 var cssBundle = document.getElementById('cssbundle'),
     fastCss =  document.getElementById('fastcss'),
     fastJs =  document.getElementById('fastjs');
 
-cssBundle.addEventListener('load', handleFastcss);
+ cssBundle.addEventListener('load', handleFastcss);
 createCookie('fastweb', 'cache', 1);
 
 function handleFastcss() {
@@ -12,12 +13,13 @@ function handleFastcss() {
   fastJs.parentNode.removeChild(fastJs);
 }
 function createCookie(name,value,days) {
+  console.log("?");
+  var expires = "";
   if (days) {
       var date = new Date();
       date.setTime(date.getTime()+(days*24*60*60*1000));
       var expires = "; expires="+date.toGMTString();
   }
-  else var expires = "";
   document.cookie = name+"="+value+expires+"; path=/";
 }
 </script>

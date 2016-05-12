@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Critical Path Performance Optimization</title>
-  {{#ifNeedToRenderFast}}
+  {{#if needToRenderFast}}
   <link rel="stylesheet" href="assets/css/bundle.css" id="cssbundle" media="none"/>
   {{> fastcss}}
   {{> fastjs}}
   {{else}}
   <link rel="stylesheet" href="assets/css/bundle.css" id="cssbundle" media="all"/>
-  {{/ifNeedToRenderFast}}
+  {{/if}}
 </head>
 <body>
-
 </body>
 </html>
