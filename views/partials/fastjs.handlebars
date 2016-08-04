@@ -4,16 +4,15 @@ var cssBundle = document.getElementById('cssbundle'),
     fastCss =  document.getElementById('fastcss'),
     fastJs =  document.getElementById('fastjs');
 
- cssBundle.addEventListener('load', handleFastcss);
-createCookie('fastweb', 'cache', 1);
+cssBundle.addEventListener('load', handleFastcss);
 
 function handleFastcss() {
+  createCookie('fastweb', 'cache', 1);
   cssBundle.setAttribute('media', 'all');
   fastCss.parentNode.removeChild(fastCss);
   fastJs.parentNode.removeChild(fastJs);
 }
 function createCookie(name,value,days) {
-  console.log("?");
   var expires = "";
   if (days) {
       var date = new Date();
